@@ -33,16 +33,6 @@ white['type'] = 0
 # Append `white` to `red`
 wines = red.append(white, ignore_index = True)
 
-# Import `train_test_split` from `sklearn.model_selection`
-from sklearn.model_selection import train_test_split
-X = wines.ix[:, 0:11]
-y = np.ravel(wines.type)
-
-# Splitting the data set for training and validating 
-X_train, X_test, y_train, y_test = train_test_split(
-		X, y, test_size = 0.34, random_state = 45)
-
-
 # Create Histogram
 fig, ax = plt.subplots(1, 2)
 
